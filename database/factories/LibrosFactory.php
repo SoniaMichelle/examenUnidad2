@@ -13,7 +13,6 @@ class LibrosFactory extends Factory
      * @var string
      */
     protected $model = Libros::class;
-
     /**
      * Define the model's default state.
      *

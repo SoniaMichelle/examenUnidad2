@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LibreriaControl;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LibreriaControl::class, 'index'])->name('libros.index');
+Route::get('mostrar/{libro}', [LibreriaControl::class, 'mostrar'])->name('libros.mostrar');
