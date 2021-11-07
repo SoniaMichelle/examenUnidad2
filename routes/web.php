@@ -15,4 +15,7 @@ use App\Http\Controllers\LibreriaControl;
 */
 
 Route::get('/', [LibreriaControl::class, 'index'])->name('libros.index');
-Route::get('mostrar/{libro}', [LibreriaControl::class, 'mostrar'])->name('libros.mostrar');
+Route::get('actualizar/{libro}/actualizar', [LibreriaControl::class, 'actualizar'])->name('libros.actualizar');
+Route::put('index/{libro}', [LibreriaControl::class, 'update'])->name('libros.update');
+/* Ruta para eliminar un registro */
+Route::delete('index/{libro}', [LibreriaControl::class, 'eliminar'])->name('libros.eliminar');
